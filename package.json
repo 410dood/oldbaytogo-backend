@@ -2,9 +2,12 @@
   "name": "oldbaytogo-backend",
   "version": "1.0.0",
   "description": "node express mongodb backend for react native project oldbaytogo",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/babel-cli/bin/babel.js ./ --source-maps --out-dir dist",
+    "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js server.js",
+    "populate": "node_modules/babel-cli/bin/babel-node.js populate.js"
   },
   "repository": {
     "type": "git",
